@@ -1,0 +1,22 @@
+[
+  {
+    "question": "When and how will I get paid for completed rides?",
+    "answer": "Payments will be settled among drivers and passengers, providing greater flexibilty to receive both offline and online payments."
+  },
+  {
+    "question": "What support is available if I have issues with a passenger?",
+    "answer": "Due to the absence of an intermediary in this platform, any disputes will have to be resolved among drivers and passengers themselves."
+  },
+  {
+    "question": "How is pricing and fare calculated for rides?",
+    "answer": "The consumer-to-consumer approach in this platform means that drivers have the freedom to determine the prices themselves."
+  },
+  {
+    "question": "What happens if a passenger cancels a booked ride?",
+    "answer": "Passengers can only cancel the booking if it is still more than 10 minutes before the actual ride. Past that, however, they would not be able to cancel the ride."
+  },
+  {
+    "question": "How do I cancel or modify an offered ride?",
+    "answer": "Please note, you won't be able to modify it after you upload the journey! Make sure that the details are correct before posting. An alternative way would be to cancel it and make a new post. Simply search for your upcoming ride and cancel from there."
+  }
+]

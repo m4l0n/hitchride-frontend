@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "99693078149",
+    "firebase_url": "https://c2c-ehailing-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "c2c-ehailing",
+    "storage_bucket": "c2c-ehailing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99693078149:android:5f93a763a38dac5eaaabec",
+        "android_client_info": {
+          "package_name": "com.m4l0n.hitchride"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99693078149-uk7dk4s1ctp6gmjtloeq5vrnp67d0fpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARdNVGBV4e4yuW4fyPnwPdexjmca7bjNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99693078149-uk7dk4s1ctp6gmjtloeq5vrnp67d0fpr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "99693078149-hj79vv6sdlklb90i91k5q34cqt1m6phb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ehailingFrontend"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
