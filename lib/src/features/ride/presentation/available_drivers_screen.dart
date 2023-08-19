@@ -6,6 +6,7 @@
 import 'package:day_night_time_picker/day_night_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
+import 'package:hitchride/src/features/ride/data/model/location_input.dart';
 import 'package:hitchride/src/features/ride/state/location_input_provider.dart';
 import 'package:hitchride/src/features/ride/data/model/location_data.dart';
 import 'package:hitchride/src/features/ride/data/model/ride.dart';
@@ -19,7 +20,6 @@ import 'package:hitchride/src/features/shared/presentation/loading_screen.dart';
 import 'package:hitchride/src/features/shared/widgets/slide_page_route.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
-
 
 class AvailableDriversScreen extends ConsumerStatefulWidget {
   const AvailableDriversScreen({Key? key}) : super(key: key);
@@ -213,15 +213,16 @@ class _AvailableDriversScreenState
 
   void _acceptRide(
       String origin, String destination, DriverJourney driverJourney) async {
+    LocationInput locationInput = ref.read(locationInputProvider);
     final ride = Ride(
         rideOriginDestination: OriginDestination(
           origin: LocationData(
-            placeId: origin,
+            placeId: locationInput.pickupPlaceId!,
             addressName: '',
             addressString: '',
           ),
           destination: LocationData(
-            placeId: destination,
+            placeId: locationInput.destinationPlaceId!,
             addressName: '',
             addressString: '',
           ),
@@ -289,7 +290,9 @@ class _AvailableDriversScreenState
             icon: const Icon(Icons.arrow_back_ios_new_rounded),
             onPressed: () {
               // Reset location input
-              Navigator.of(context).pushReplacement(SlidePageRoute(builder: (context) => const LoadingScreen(), isSlideRight: true));
+              Navigator.of(context).pushReplacement(SlidePageRoute(
+                  builder: (context) => const LoadingScreen(),
+                  isSlideRight: true));
             },
           ),
           automaticallyImplyLeading: false,

@@ -37,12 +37,12 @@ final driverJourneyRideProvider =
   return await rideRepository.getRideByDriverJourney(djId);
 });
 
-final userRecentRidesProvider = FutureProvider<List<Ride>>((ref) async {
+final userRecentRidesProvider = FutureProvider.autoDispose<List<Ride>>((ref) async {
   final rideRepository = ref.read(rideRepositoryProvider);
   return await rideRepository.getRecentRides();
 });
 
-final userRecentDrivesProvider = FutureProvider<List<Ride>>((ref) async {
+final userRecentDrivesProvider = FutureProvider.autoDispose<List<Ride>>((ref) async {
   final rideRepository = ref.read(rideRepositoryProvider);
   return await rideRepository.getRecentDrives();
 });

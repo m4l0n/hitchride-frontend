@@ -51,7 +51,7 @@ final userReviewsFilteredProvider = Provider<List<Review>>((ref) {
         case FilterType.forYou:
           return reviewsList
               .where((review) =>
-                  review.reviewRide.rideDriverJourney.djDriver!.userName ==
+                  review.reviewRide.rideDriverJourney.djDriver!.userId ==
                   FirebaseAuth.instance.currentUser!.uid)
               .toList();
         default:
